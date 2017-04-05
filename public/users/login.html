@@ -1,0 +1,58 @@
+﻿<div class="container" style="margin-bottom:50px;margin-top:150px">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box">
+                <h2 class="text-uppercase">Sign In</h2>
+
+                <p class="lead">Already a Member of Cashflow?</p>
+                <p class="text-muted">Sign in and see what we have for you today. If you dont remember your password, click on the forgot password link</p>
+                <hr>
+
+                <form  name="loginForm" novalidate>
+                    <span ng-show="loginErr" ng-bind="invalidCredentials" class="error-message"></span>
+                    <div class="form-group">
+                        <label for="email"><b>Username</b></></label>
+                        <input type="text" ng-model="username" ng-required="true" class="form-control" name="inputUsername" placeholder="Enter your Email or Username">
+                        <span ng-show="loginForm.inputUsername.$dirty && loginForm.inputUsername.$error.required" class="error-message">Username is required</span>
+                        <span ng-show="inputUsername && !loginForm.inputUsername.$dirty" class="error-message">Username is required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" ng-model="password" ng-required="true" name="inputPassword" placeholder="Enter your password">
+                        <span ng-show="loginForm.inputPassword.$dirty && loginForm.inputPassword.$error.required" class="error-message">Password is required</span>
+                        <span ng-show="inputPassword && !loginForm.inputPassword.$dirty" class="error-message">Password is required</span>
+                    </div>
+                    <div class="">
+                        <a id="login" ng-click="login()" class="mbr-buttons__btn btn btn-danger"><i class="fa fa-sign-in"></i> Log in</a><p class="text-muted pull-right">Not a member?<a href="#/signup" style="color:orangered">Join us </a></p><br/>
+                        <div ng-show="loginSuc" style="color:green"><span>Successful login.You will be redirected in </span><span ng-bind="time"></span><span> seconds</span></div>
+                        <p class="text-muted pull-right"><a href="" style="color:orangered"> I have Forgotten my Password? </a></p>
+                        <span class="ingnix_login_message"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-6" style="text-align:justify">
+            <h2 class="text-uppercase">How Cashflow Works</h2>
+            <p>
+                When you Join, you will need to donate the sum of either N5000, N10000, N20000 or N50000 to a fellow member assigned by the system or your direct link, and the member will then confirm your donation and then the system will automatically
+                assign 2 other registered people under you from spillovers who will also pay you the joining amount each, into your bank account, making 200% (i.e. 200% of N5000 is N10000, 200% of N10000 is N20000, 200% of N20000 is N40000 and 200% of N50000 is N100000).
+            </p>
+            <p>Cashflow will assign referrals to pay you. After you have received payment from 2 people under you, the system will automatically EXIT you and allows unlimited registration.</p>
+            <p>
+                All donations are made directly to member bank account.  Share Cashflow to people and make the world a better place.
+                <br />
+            </p>
+            <p>
+                <font color="red">
+                    Cashflow has stopped sending Messages to participants. Please discard any message bearing Cashflow. They are from hackers that wants to ruin your account.
+                    <br /> Cashflow will never suspend your account for using your personal password in your account. If we need you to change your password or to do anything about your account,
+                    we will send you an Internal mail with <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="9cefe9ececf3eee8dce8ebf5f2f7fdefb2fff3f1b2">[email&#160;protected]</a>
+                    <script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function (t, e, r, n, c, a, p) { try { t = document.currentScript || function () { for (t = document.getElementsByTagName('script'), e = t.length; e--;) if (t[e].getAttribute('data-cfhash')) return t[e] }(); if (t && (c = t.previousSibling)) { p = t.parentNode; if (a = c.getAttribute('data-cfemail')) { for (e = '', r = '0x' + a.substr(0, 2) | 0, n = 2; a.length - n; n += 2) e += '%' + ('0' + ('0x' + a.substr(n, 2) ^ r).toString(16)).slice(-2); p.replaceChild(document.createTextNode(decodeURIComponent(e)), c) } p.removeChild(t) } } catch (u) { } }()/* ]]> */</script> Please be careful. Copy and Hide your activation codes. Without it, they cant activate themselves. Send all suspicious activation to <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="bdcfd8cbd8cfc9dcdec9d4cbdcc9d4d2d3fdc9cad4d3d6dcce93ded2d0">[email&#160;protected]</a>
+                    <script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function (t, e, r, n, c, a, p) { try { t = document.currentScript || function () { for (t = document.getElementsByTagName('script'), e = t.length; e--;) if (t[e].getAttribute('data-cfhash')) return t[e] }(); if (t && (c = t.previousSibling)) { p = t.parentNode; if (a = c.getAttribute('data-cfemail')) { for (e = '', r = '0x' + a.substr(0, 2) | 0, n = 2; a.length - n; n += 2) e += '%' + ('0' + ('0x' + a.substr(n, 2) ^ r).toString(16)).slice(-2); p.replaceChild(document.createTextNode(decodeURIComponent(e)), c) } p.removeChild(t) } } catch (u) { } }()/* ]]> */</script> and we are sure to respond swiftly.
+                </font>
+            </p>
+
+        </div>
+    </div>
+</div>

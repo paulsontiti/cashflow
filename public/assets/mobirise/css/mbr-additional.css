@@ -1,0 +1,34 @@
+﻿#dropdown-menu-4 .hide-buttons [data-button] {
+  display: none !important;
+}
+#dropdown-menu-4 .nav .link,
+#dropdown-menu-4 .dropdown-item {
+  font-size: 1em;
+  color: #f97352;
+}
+#dropdown-menu-4 .navbar,
+#dropdown-menu-4 .dropdown-menu {
+  background: #333333;
+}
+#dropdown-menu-4 .dropdown-menu .dropdown-toggle[aria-expanded="true"],
+#dropdown-menu-4 .dropdown-menu a:hover,
+#dropdown-menu-4 .dropdown-menu a:focus {
+  background: #292929;
+}
+#dropdown-menu-4 .navbar-toggler {
+  color: #f97352;
+}
+#slider-5 H1 {
+  text-align: right;
+}
+#content5-j .mbr-header .mbr-header__text {
+  text-align: center;
+  color: #fff;
+}
+#content5-j .mbr-header .mbr-header__subtext {
+  text-align: center;
+  color: #fff;
+}
+#content5-j .mbr-article {
+  color: #fff;
+}

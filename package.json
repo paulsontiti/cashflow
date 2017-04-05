@@ -1,0 +1,26 @@
+{
+  "name": "cashflow",
+  "version": "1.0.0",
+  "description": "a ponzy scheme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulsontiti/cashflow.git"
+  },
+  "author": "titi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulsontiti/cashflow/issues"
+  },
+  "homepage": "https://github.com/paulsontiti/cashflow#readme",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "mongodb": "*",
+    "mongoose": "*",
+    "bcryptjs": "*"
+  }
+}

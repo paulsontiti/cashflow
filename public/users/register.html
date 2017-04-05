@@ -1,0 +1,169 @@
+﻿<div id="heading-breadcrumbs" style="margin-top:50px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1 style="color:#FFF">Sign Up</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="content" style="margin-bottom:100px">
+    <div class="container">
+
+        <div class="row">
+            <form name="signupForm" novalidate>
+                <div class="col-md-6">
+                    <div class="box">
+                        <h2 class="text-uppercase">
+                            Sign Up
+                            ({{package}}
+                            - N{{price}})
+                        </h2>
+                        <p></p>
+                        <!--<p class="text-muted">
+                            This process should not take more than one minute. You are only given 12 hours to pay up the stipulated amount above if you get a sponsor.<br />
+                            If you do not wish to belong to the group above, please <a href="#/signup" style="color:orangered">Click Here</a>
+                        </p>-->
+
+                        <div class="form-group">
+                            <label for="name-login">Referral's Username</label>
+                            <input type="text" class="form-control" ng-model="referral"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="name-login">Fullname</label>
+                            <input type="text" ng-required="true" class="form-control" ng-model="fullname" name="fullname_text" placeholder="Enter your fullname">
+
+                            <span ng-show="!signupForm.fullname_text.$dirty && fullname_text" ng-cloak class="error-message">Fullname is required</span>
+                            <span ng-show="signupForm.fullname_text.$dirty && signupForm.fullname_text.$error.required" ng-cloak class="error-message">Fullname is required</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-login">Gender</label>
+                            <select class="form-control" name="gender_text" ng-required="true" ng-model="gender">
+                                <option value="">-- Select Sex --</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            <span ng-show="!signupForm.gender_text.$dirty && gender_text" ng-cloak class="error-message">Gender is required</span>
+                            <span ng-show="signupForm.gender_text.$dirty && signupForm.gender_text.$error.required" ng-cloak class="error-message">Gender is required</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-login">Resident State</label>
+                            <select class="form-control" name="state_text" ng-required="true" ng-model="state">
+                                <option value="">-- Select State --</option>
+                                <option value="1">Abia</option>
+                                <option value="2">Abuja</option>
+                                <option value="3">Adamawa</option>
+                                <option value="4">Akwa-ibom</option>
+                                <option value="5">Anambra</option>
+                                <option value="6">Bauchi</option>
+                                <option value="7">Bayelsa</option>
+                                <option value="8">Benue</option>
+                                <option value="9">Borno</option>
+                                <option value="10">Cross-River</option>
+                                <option value="11">Delta</option>
+                                <option value="12">Ebonyi</option>
+                                <option value="13">Edo</option>
+                                <option value="14">Ekiti</option>
+                                <option value="15">Enugu</option>
+                                <option value="17">Gombe</option>
+                                <option value="18">Imo</option>
+                                <option value="16">International</option>
+                                <option value="19">Jigawa</option>
+                                <option value="21">Kaduna</option>
+                                <option value="20">Kano</option>
+                                <option value="22">Kastina</option>
+                                <option value="23">Kebbi</option>
+                                <option value="24">Kogi</option>
+                                <option value="25">Kwara</option>
+                                <option value="26">Lagos</option>
+                                <option value="27">Nasarawa</option>
+                                <option value="28">Niger</option>
+                                <option value="29">Ogun</option>
+                                <option value="30">Ondo</option>
+                                <option value="31">Osun</option>
+                                <option value="32">Oyo</option>
+                                <option value="33">Plateau</option>
+                                <option value="34">Rivers</option>
+                                <option value="35">Sokoto</option>
+                                <option value="36">Taraba</option>
+                                <option value="37">Yobe</option>
+                                <option value="38">Zamfara</option>
+                            </select>
+
+                            <span ng-show="!signupForm.state_text.$dirty && state_text" ng-cloak class="error-message">State is required</span>
+                            <span ng-show="signupForm.state_text.$dirty && signupForm.state_text.$error.required" ng-cloak class="error-message">State is required</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="box">
+                        <p class="lead">Critical Information</p>
+
+                        <div class="form-group">
+                            <label for="email">Contact Mobile <small>(08x, 07x, 09x Format)</small> <span class="phoneMSG"></span></label>
+                            <input type="text" ng-required="true" class="form-control mobile_text" ng-model="mobile" ng-pattern="/^(08|07|09)\d{9}$/" name="mobile_text" placeholder="Enter your Mobile number in the 080x, 070x Format">
+                            <span ng-show="signupForm.mobile_text.$dirty && signupForm.mobile_text.$error.required" ng-cloak class="error-message">Mobile is required</span>
+                            <span ng-show="!signupForm.mobile_text.$dirty && mobile_text" ng-cloak class="error-message">Mobile is required</span>
+                            <span ng-show="signupForm.mobile_text.$dirty && !signupForm.mobile_text.$error.required && signupForm.mobile_text.$invalid" ng-cloak class="error-message">Invalid phone number format</span>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span class="emailMSG"></span></label>
+                            <input type="email" class="form-control email_text" ng-required="true" ng-model="email" name="email_text" placeholder="Enter your Email address">
+                            <span ng-show="signupForm.email_text.$dirty && !signupForm.email_text.$error.required && signupForm.email_text.$error.email" ng-cloak class="error-message">Invalid email</span>
+                            <span ng-show="signupForm.email_text.$dirty && signupForm.email_text.$error.required && !signupForm.email_text.$error.email" ng-cloak class="error-message">Email is required</span>
+                            <span ng-show="!signupForm.email_text.$dirty && email_text" ng-cloak class="error-message">Email is required</span>
+</div>
+                        <div class="form-group">
+                            <label for="email">Username <span class="usernameMSG"></span></label>
+                            <input id="user" type="text" ng-model="username" username-exist ng-required="true" ng-minlength="6" ng-maxlength="20" class="form-control username_text" name="username_text" placeholder="Enter your Unique Username.">
+                            <span></span>
+                            <span ng-show="usernameErr && usernameExists && showUsernameErr && !signupForm.username_text.$error.required" class="error-message">Username is already taken</span>
+                            <span ng-show="signupForm.username_text.$dirty && !signupForm.username_text.$error.required && signupForm.username_text.$error.maxlength" ng-cloak class="error-message">Maximum length is 20 letters</span><br />
+                            <span ng-show="signupForm.username_text.$dirty && !signupForm.username_text.$error.required && !signupForm.username_text.$error.maxlength && signupForm.username_text.$error.minlength" ng-cloak class="error-message">Minimum length is 6 letters</span>
+                            <span ng-show="!signupForm.username_text.$dirty && username_text" ng-cloak class="error-message">Username is required</span>
+                            <span ng-show="signupForm.username_text.$dirty && signupForm.username_text.$error.required" ng-cloak class="error-message">Username is required</span>
+</div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" password-strength-checker ng-required="true" ng-model="password" class="form-control" id="password1" name="password1" placeholder="Please enter your password">
+                            <span></span>
+                            <span ng-show="!signupForm.password1.$dirty && password1" ng-cloak class="error-message">Password is required</span>
+                            <span ng-show="signupForm.password1.$dirty && signupForm.password1.$error.required" class="error-message">Password is required</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Confirm Password</label>
+                            <input type="password" password-match ng-required="true" ng-model="password2" class="form-control" id="password2" name="password2" placeholder="Please confirm your password">
+                            <span style="display:none" class="error-message">Password do not match</span>
+                            <span ng-show="!signupForm.password2.$dirty && password2" ng-cloak class="error-message">Confirm Password is required</span>
+                            <span ng-show="signupForm.password1.$dirty && signupForm.password1.$error.required" class="error-message">Confirm Password is required</span>
+                           
+                        </div>
+                        <div class="form-group">
+                            <label>Captcha. What is the answer to 5 X 2 = ?</label>
+                            <input type="text" name="captcha_answer" ng-required="true" ng-model="userAns" placeholder="Your Answer" class="form-control">
+                            <span ng-show="signupForm.captcha_answer.$dirty && userAns != captchaAns" class="error-message">Not correct</span>
+                            <span ng-show="signupForm.captcha_answer.$dirty && userAns == captchaAns" style="color:green">Correct</span>
+                            <span ng-show="!signupForm.captcha_answer.$dirty && captcha_answer" ng-cloak class="error-message">Pleas provide an answer</span>
+                            <span ng-show="signupForm.captcha_answer.$dirty && signupForm.captcha_answer.$error.required" class="error-message">Please provide an answer</span>
+                        </div>
+                        <div class="">
+                            <input type="hidden" name="refererID" value="" />
+                            <input type="hidden" name="refererID_bringer" value="0" />
+                            <input type="hidden" name="pkID" value="VHB5Skl5NmJFS0JTYnFYdTIwL2FaQT09" />
+                            <input type="hidden" name="payTO" value="" />
+                            <input type="hidden" name="token" value="hjtU6349BTI8Tcurtyfugv77" />
+                            <button ng-click="register()" class="mbr-buttons__btn btn btn-danger"><i class="fa fa-edit"></i> Create Account</button>
+                            
+                            <div ng-show="suc" style="color:green"><span>Successful registration.You will be redirected in </span><span ng-bind="time"></span><span> seconds</span></div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
